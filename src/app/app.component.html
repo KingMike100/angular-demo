@@ -1,4 +1,38 @@
-<hello name="{{ name }}"></hello>
-<p>
-  Start to see some magic happen :)
-</p>
+<div class="body">
+  <h1> Dealing Cards </h1>
+
+  <img src='assets/jc.png' width="300" height="400"/>
+  <h1 id='Title'>Puzzle</h1>
+  <div id='MainText' class='maintext'>Children are sitting in a circle, and a teacher walks around the circle, dealing
+    cards. The teacher gives a Jack to every second child, and a Queen to every third child.
+
+    After going around four times, the sixth child in the circle from where the teacher started has two Jacks and two
+    Queens.
+
+    What is the smallest possible number of children in the circle?</div>
+
+  <br>
+  <button (click)="showHint()">Show Hint</button>
+
+  <div *ngIf="showHintContent">
+    <h3 id='Hint'>Must there be an even or an odd number of children in the circle?</h3>
+
+    <button (click)="showAnswer()">Show Answer</button>
+
+    <div *ngIf="showAnswerContent">
+      <h3>Correct Answer: 7</h3>
+      <div>The teacher goes round the circle four times. If there was an even number of children, the sixth child would
+        always receive a Jack each time and would have four Jacks by the end. Since they only have two Jacks, there must
+        be an odd number of children in the circle.
+
+        The sixth child receives a Queen in the first round because 6 is a multiple of 3. She only receives one more
+        Queen so the answer can't be a multiple of 3.
+
+        The options are 7, 11, 13, 17, 19 … and so 7 is the fewest number of children. </div>
+      <br>
+    </div>
+
+  </div>
+
+
+</div>
