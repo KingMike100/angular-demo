@@ -1,3 +1,28 @@
-p {
-  font-family: Lato;
+body {
+  color: white;
+  font-family: Garamond;
+  background: linear-gradient(#e66465, #9198e5);
+  font-size: 15pt;
+}
+
+.maintext {
+  color: white;
+  font-family: Garamond;
+  font-size: 20pt;
+}
+
+.text {
+  color: white;
+  font-family: Garamond;
+  font-size: 15pt;
+}
+
+.hidden {
+  visibility: hidden;
+  font-size: 0;
+}
+
+.fullhide {
+  display: none;
+  font-size: 0;
 }
